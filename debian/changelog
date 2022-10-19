@@ -1,0 +1,104 @@
+vmdk-stream-converter (0.2-8) unstable; urgency=medium
+
+  * Update pattern for GitHub archive URLs from /<org>/<repo>/tags
+    page/<org>/<repo>/archive/<tag> -> /<org>/<repo>/archive/refs/tags/<tag>.
+  * Update standards version to 4.5.1, no changes needed.
+  * Add ${misc:Depends} and drop lintian-overrides
+  * Enable autopkgtest via Testsuite: autopkgtest-pkg-python
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 04 Jul 2021 22:51:49 +0900
+
+vmdk-stream-converter (0.2-7) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Move source package lintian overrides to debian/source.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Hideki Yamane ]
+  * Set Section: python to python3-vmdkstream to fix lintian info
+    "wrong-section-according-to-package-name"
+
+ -- Hideki Yamane <henrich@debian.org>  Fri, 02 Oct 2020 22:50:37 +0900
+
+vmdk-stream-converter (0.2-6) unstable; urgency=medium
+
+  * Add debian/tests/pkg-python/import-name for autopkgtest
+
+ -- Hideki Yamane <henrich@debian.org>  Fri, 05 Jun 2020 23:46:47 +0900
+
+vmdk-stream-converter (0.2-5) unstable; urgency=medium
+
+  * debian/control
+    - Set Debian Python Modules Team as maintainer
+    - Add Rules-Requires-Root: no
+    - Set Standards-Version: 4.5.0
+    - Use dh-sequence-python3 instead of dh-python, and simplify debian/rules
+      a bit
+  * Drop debian/compat, debhelper and set debhelper-compat (= 13)
+  * debian/patches
+    - Add 0003-version-0.3-taken-from-EPEL-repo.patch
+  * Add debian/gbp.conf
+  * Add debian/salsa-ci.yml
+
+ -- Hideki Yamane <henrich@debian.org>  Wed, 03 Jun 2020 21:12:09 +0900
+
+vmdk-stream-converter (0.2-4.1) unstable; urgency=medium
+
+  * Non-maintainer upload
+  * Upload to unstable
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Sat, 07 Dec 2019 21:33:51 +0100
+
+vmdk-stream-converter (0.2-4.1~exp0) experimental; urgency=medium
+
+  * Non-maintainer upload
+  * Switch to Python 3 (LP: #1735370) (Closes: #883804, #938793)
+  * Rename main package to python3-vmdkstream to follow Python 3 module naming policy
+  * debian/control: Simplify build dependencies
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Wed, 27 Nov 2019 15:01:52 +0100
+
+vmdk-stream-converter (0.2-4) unstable; urgency=medium
+
+  * debian/control
+    - update Vcs-* to move salsa.debian.org
+    - set Standards-Version: 4.2.1
+  * use dh11
+  * debian/copyright
+    - use https
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 23 Sep 2018 22:38:34 +0900
+
+vmdk-stream-converter (0.2-3) unstable; urgency=medium
+
+  * debian/control
+    - set Priority: optional
+    - set Standards-Version: 4.1.1
+
+ -- Hideki Yamane <henrich@debian.org>  Wed, 25 Oct 2017 04:32:26 +0900
+
+vmdk-stream-converter (0.2-2) unstable; urgency=medium
+
+  * debian/control
+    - set Build-Depends: debhelper (>= 10)
+    - add Vcs-*
+    - set Standards-Version: 4.0.0
+  * debian/compat
+    - set 10
+  * debian/watch
+    - update to version 4
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 22 Jul 2017 12:56:36 +0900
+
+vmdk-stream-converter (0.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #694408)
+
+ -- Hideki Yamane <henrich@debian.org>  Tue, 13 Nov 2012 21:53:53 +0900

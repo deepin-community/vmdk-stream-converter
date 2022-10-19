@@ -1,0 +1,30 @@
+Source: vmdk-stream-converter
+Section: misc
+Priority: optional
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Hideki Yamane <henrich@debian.org>
+Build-Depends: debhelper-compat (= 13), dh-sequence-python3, python3-all,
+Standards-Version: 4.5.1
+Homepage: https://github.com/imcleod/VMDK-stream-converter
+Vcs-Git: https://salsa.debian.org/python-team/packages/vmdk-stream-converter.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/vmdk-stream-converter
+Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-python
+
+Package: python3-vmdkstream
+Section: python
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Description: Python 3 module for converting raw disk images to VMDK files
+ This Python 3 module converts raw disk images to stream-optimized VMDK files
+ for VMWare ESX/vSphere environment, and known to work on ESXi 4.1.
+ .
+ Its format is only useful if you are attempting to import virtual machines
+ into ESX using the vSphere SOAP API and HTTP POST uploads of image files.
+ (In which case, it is required.)
+
+Package: vmdk-stream-converter
+Architecture: all
+Depends: python3-vmdkstream, ${misc:Depends}
+Description: transitional dummy package
+ This is a transitional dummy package. It can safely be removed.
